@@ -1,54 +1,78 @@
-/* General Styles */
+/* Basic Styling - Customize as needed */
 body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 20px;
-  background-color: #F8F0E3; /* Light, warm color */
-  color: #472E0E;  /* Dark brown text */ 
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #D2B48C; /* Light coffee background */
+    color: #40281B; /* Dark Coffee Text */
 }
 
 header {
-  background-color:  #D2B48C; /* Light coffee color */
-  padding: 20px 0;
-  text-align: center;
+    background-color: #bb714e; /* Medium roast header */
+    text-align: center;
+    padding: 15px 0;
 }
 
 nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+    list-style: none;
+    padding: 0;
 }
 
 nav li {
-  display: inline;
-  margin: 0 15px;
+    display: inline;
+    margin: 0 10px;
 }
+#hero img { 
+    max-width: 80%;  /* Prevent image from overflowing its container*/
+    height: auto;  /* Maintain image aspect ratio */
+    display: block; /* Makes image a block element */
+    margin: 20px auto; /* Centers the image with some space around it*/
+} 
+/* ...rest of your styles */ 
+/* Basic Styles */
 
-/* Cake Styling (From previous example) */
+  .cake-container {
+    width: 150px; /* Adjust width as needed*/
+    height: 150px; /* Adjust height as needed*/
+    margin: 50px auto;
+    position: relative; /* Needed for pseudo-elements */
+  }
+  
+  .cake-top {
+    width: 100%;
+    height: 60%; /* Adjust height for frosting ratio */
+    background-color:peru; /* Brown color for cake */
+    border-radius: 50%; /* Round top */
+  }
+  
+  .cake-bottom {
+    width: 80%; /* Smaller than top for layering effect */
+    height: 40%; /* Adjust height for cake base */
+    background-color: peru;
+    border-radius: 50%;
+    position: absolute; /* Layer on top of cake-top */
+    bottom: 0; /* Move to bottom of container */
+  }
+  
+  /* Optional: Add a subtle shadow */
+  .cake-container::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 10px; /* Shadow height */
+    background-color: rgba(0, 0, 0, 0.2); /* Transparent gray shadow */
+    border-radius: 50%;
+    position: absolute;
+    bottom: -5px; /* Move shadow slightly below cake */
+  }
+
+  /* Add this to your existing styles */
 .cake-container { 
-   width: 180px; 
-   height: 180px; 
-   margin: 30px auto;
-   position: relative; 
-   animation: wobble 2s infinite alternate;
-}
-
-.cake-top {
-  width: 100%;
-  height: 60%; 
-  background-color: peru;
-  border-radius: 50%; 
-}
-
-.cake-bottom {
-  width: 80%;
-  height: 40%;
-  background-color: peru; 
-  border-radius: 50%;
-  position: absolute; 
-  bottom: 0; 
-}
-
-/* Intro & Recipe Styling */
-#intro, #recipe {
-  margin-bottom: 
+    animation: wobble 2s infinite alternate;
+ }
+ 
+ @keyframes wobble {
+   from { transform: rotate(-5deg); }
+   to { transform: rotate(5deg); }
+ }
+ 
