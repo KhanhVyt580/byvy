@@ -1,78 +1,29 @@
-/* Basic Styling - Customize as needed */
 body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 20px;
-    background-color: #D2B48C; /* Light coffee background */
-    color: #40281B; /* Dark Coffee Text */
+  margin: 2rem; /* Add some margin around the resume content */
+  font-family: Arial, sans-serif;
 }
 
-header {
-    background-color: #bb714e; /* Medium roast header */
-    text-align: center;
-    padding: 15px 0;
+h1, h2, h3 {
+  font-weight: bold;
 }
 
-nav ul {
-    list-style: none;
-    padding: 0;
+hr {
+  border: 1px solid #ddd;
+  margin: 1rem 0; /* Add some space above and below the hr line */
 }
 
-nav li {
-    display: inline;
-    margin: 0 10px;
+.section {
+  margin-bottom: 1.5rem; /* Increase section spacing slightly */
 }
-#hero img { 
-    max-width: 80%;  /* Prevent image from overflowing its container*/
-    height: auto;  /* Maintain image aspect ratio */
-    display: block; /* Makes image a block element */
-    margin: 20px auto; /* Centers the image with some space around it*/
-} 
-/* ...rest of your styles */ 
-/* Basic Styles */
 
-  .cake-container {
-    width: 150px; /* Adjust width as needed*/
-    height: 150px; /* Adjust height as needed*/
-    margin: 50px auto;
-    position: relative; /* Needed for pseudo-elements */
-  }
-  
-  .cake-top {
-    width: 100%;
-    height: 60%; /* Adjust height for frosting ratio */
-    background-color:peru; /* Brown color for cake */
-    border-radius: 50%; /* Round top */
-  }
-  
-  .cake-bottom {
-    width: 80%; /* Smaller than top for layering effect */
-    height: 40%; /* Adjust height for cake base */
-    background-color: peru;
-    border-radius: 50%;
-    position: absolute; /* Layer on top of cake-top */
-    bottom: 0; /* Move to bottom of container */
-  }
-  
-  /* Optional: Add a subtle shadow */
-  .cake-container::after {
-    content: "";
-    display: block;
-    width: 100%;
-    height: 10px; /* Shadow height */
-    background-color: rgba(0, 0, 0, 0.2); /* Transparent gray shadow */
-    border-radius: 50%;
-    position: absolute;
-    bottom: -5px; /* Move shadow slightly below cake */
-  }
+.contact-info {
+  font-style: italic; /* Style contact info slightly differently */
+}
 
-  /* Add this to your existing styles */
-.cake-container { 
-    animation: wobble 2s infinite alternate;
- }
- 
- @keyframes wobble {
-   from { transform: rotate(-5deg); }
-   to { transform: rotate(5deg); }
- }
- 
+.skills li {
+  display: inline-block;
+  margin-right: 1rem;
+  padding: 0.5rem 1rem; /* Add some padding to skills */
+  border: 1px solid #ddd;
+  border-radius: 5px; /* Add rounded corners to skills */
+}
